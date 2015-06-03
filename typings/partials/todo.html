@@ -1,0 +1,20 @@
+<p (mouseover)="getAllTasks()"> Hello: {{ myName }}</p>
+<p *if="ToDos && ToDos.length > 0" >Tasks:</p>
+<ol *if="ToDos">
+    <li *for="#todo of ToDos" |todo|="todo">
+       Title:  {{todo.Title}}
+        Description: {{todo.Description}}
+        DueDate {{todo.DueDate}}
+    </li>
+</ol>
+
+<fieldset>
+    <legend>New task</legend>
+<label for="title">Title:</label>
+<input id="title" type="text" #newtodotitle />
+<label for="description">Description:</label>
+<input id="description" type="text" #newtododescription />
+<label for="dueDate">Due Date:</label>
+<input id="dueDate" type="date" type="text" #newtododuedate />
+<button (click)="addTodo(newtodotitle, newtododescription, newtododuedate)">Add</button>
+</fieldset>
