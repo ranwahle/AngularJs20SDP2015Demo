@@ -11,21 +11,26 @@ if (typeof __metadata !== "function") __metadata = function (k, v) {
 };
 var angular2_1 = require('angular2/angular2');
 var Fetch_1 = require('./Fetch');
-// Annotation section
-angular2_1.Component({
-    selector: 'my-app'
-});
-angular2_1.View({
-    template: '<h1>Hello {{ name }}</h1>' +
-        '<input type="text" (value)="name"/>'
-});
-// Component controller
-var MyAppComponent = (function () {
-    function MyAppComponent() {
-        this.name = 'Angular';
-    }
-    return MyAppComponent;
-})();
+//// Annotation section
+//Component({
+//    selector: 'my-app'
+//})
+//View({
+//    template: '<h1>Hello {{ name }}</h1>' +
+//        '<input type="text" (value)="name"/>'
+//})
+//// Component controller
+//class MyAppComponent {
+//    name: string;
+//
+//    constructor() {
+//        this.name = 'Angular';
+//
+//
+//    }
+//
+//
+//}
 var Todo = (function () {
     function Todo() {
     }
@@ -66,14 +71,10 @@ var DisplayComponent = (function () {
             },
             set: function (value) {
                 this.todos = value;
-                //View.apply();
             },
             enumerable: true
         });
         this.getAllTasks();
-        // createProtoChangeDetector('todos', this.todos);// variableBindings:List<string>, directiveRecords:List<DirectiveRecord>, changeControlStrategy:string = DEFAULT)
-        // lifecycle: [onChange]
-        // this.todos = ['Aarav', 'Martín', 'Shannon', 'Ariana', 'Kai'];
     }
     DisplayComponent = __decorate([
         angular2_1.Component({
@@ -82,7 +83,7 @@ var DisplayComponent = (function () {
         }),
         angular2_1.View({
             templateUrl: 'partials/todo.html',
-            directives: [angular2_1.For, angular2_1.If]
+            directives: [angular2_1.NgFor, angular2_1.NgIf]
         }), 
         __metadata('design:paramtypes', [])
     ], DisplayComponent);

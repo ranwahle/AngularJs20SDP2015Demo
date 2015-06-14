@@ -1,27 +1,27 @@
-import {Component, View, bootstrap, For, If} from 'angular2/angular2';
+import {Component, View, bootstrap, NgFor, NgIf} from 'angular2/angular2';
 
 import  {Fetch} from './Fetch'
 
-// Annotation section
-Component({
-    selector: 'my-app'
-})
-View({
-    template: '<h1>Hello {{ name }}</h1>' +
-        '<input type="text" (value)="name"/>'
-})
-// Component controller
-class MyAppComponent {
-    name: string;
-
-    constructor() {
-        this.name = 'Angular';
-
-
-    }
-
-
-}
+//// Annotation section
+//Component({
+//    selector: 'my-app'
+//})
+//View({
+//    template: '<h1>Hello {{ name }}</h1>' +
+//        '<input type="text" (value)="name"/>'
+//})
+//// Component controller
+//class MyAppComponent {
+//    name: string;
+//
+//    constructor() {
+//        this.name = 'Angular';
+//
+//
+//    }
+//
+//
+//}
 class Todo{
     Title: string;
     Description: string;
@@ -35,7 +35,7 @@ class Todo{
 @View({
     templateUrl: 'partials/todo.html',
 
-   directives: [For, If]
+   directives: [NgFor, NgIf]
 })
 
 

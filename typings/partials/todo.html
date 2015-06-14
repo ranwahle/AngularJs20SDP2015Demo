@@ -1,7 +1,7 @@
 <p (mouseover)="getAllTasks()"> Hello: {{ myName }}</p>
-<p *if="ToDos && ToDos.length > 0" >Tasks:</p>
-<ol *if="ToDos">
-    <li *for="#todo of ToDos" |todo|="todo">
+<p *ng-if="ToDos && ToDos.length > 0" >Tasks:</p>
+<ol *ng-if="ToDos">
+    <li *ng-for="#todo of ToDos">
        Title:  {{todo.Title}}
         Description: {{todo.Description}}
         DueDate {{todo.DueDate}}
